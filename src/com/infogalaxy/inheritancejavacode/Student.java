@@ -6,23 +6,24 @@ public class Student {
     Scanner sc = new Scanner(System.in);
     int id;
     String name;
-    void setStudent(){
-        System.out.println("Enter Student Id and Name : ");
+
+    void setStudent() {
+        System.out.println("Enter Student Id : ");
         id = sc.nextInt();
+        System.out.println("Enter Student Name : ");
         name = sc.next();
-    }
-}
-class Result extends Student {
-    void getStudent(){
-        System.out.println("Student ID is : "+id);
-        System.out.println("Student Name is : "+name);
-    }
-}
-class Main{
-    public static void main(String[] args) {
-        Result result = new Result();
-        result.setStudent();
-        result.getStudent();
+
     }
 }
 
+class Internal extends Student {
+    int m1;
+    int m2;
+
+    void setMarks() {
+        System.out.println("Enter The M1 Mark : ");
+        m1 = sc.nextInt();
+        System.out.println("Enter The M2 Mark : ");
+        m2 = sc.nextInt();
+    }
+}
